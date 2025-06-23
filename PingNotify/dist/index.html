@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&family=Source+Sans+Pro:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Media query for screens 375px and smaller */
+      #para-1 {
+        font-size: 30px;
+        font-weight: 2px;
+      }
+      @media (max-width: 380px) {
+        #para-1 {
+          font-size: 25px;
+          font-weight: 2px;
+        }
+      }
+      #btn-1 {
+        width: 180px;
+      }
+      @media (max-width: 610px) {
+        #btn-1 {
+          width: 320px;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Logo Tag -->
+    <div class="w-full h-14 flex justify-center items-center px-9 py-5 md:px-4">
+      <img src="images/logo.svg" alt="logo-image" />
+    </div>
+    <!-- Header text -->
+    <div
+      class="w-full h-14 flex flex-col justify-center items-center px-9 py-0 md:px-4"
+    >
+      <p
+        id="para-1"
+        class="justify-center items-center text-gray-400 md:text-4xl font-sans md:p-3"
+      >
+        We are luanching <span class="text-black">soon!</span>
+      </p>
+      <p class="py-19 text-gray-600">Subscribe and got notified</p>
+    </div>
+    <!-- Seach bar -->
+    <div class="flex justify-center p-4">
+      <form id="myForm">
+        <div class="mb-4">
+          <input
+            class="w-80 px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-full focus:outline-none focus:border-indigo-500 m-2"
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+          />
+          <button
+            id="btn-1"
+            class="w-40 bg-sky-600 text-white rounded-full shadow-xl hover:bg-sky-800 px-4 py-2 m-2"
+            type="submit"
+          >
+            Notify Me
+          </button>
+          <p id="error" class="text-red-500 text-xs mt-2 hidden">
+            Whoops! It looks like you forgot to add your email.
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!-- Image Section -->
+    <div class="flex justify-center items-center">
+      <div class="w-80 md:w-1/3 flex justify-center items-center">
+        <img src="images/illustration-dashboard.png" alt="" />
+      </div>
+    </div>
+    <!-- Footer Section -->
+    <div
+      class="flex justify-center items-center text-sky-500 md:px-16 pt-14 pb-3"
+      id="icons"
+    >
+      <i class="fa fa-facebook px-9 md:px-12"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram px-9 md:px-12"></i>
+    </div>
+    <p class="flex justify-center items-center text-gray-600 text-xs pb-5">
+      Copyright Ping. All rights are reserved.
+    </p>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const emailInput = document.getElementById("email");
+          const errorText = document.getElementById("error");
+
+          if (emailInput.value === "") {
+            errorText.classList.remove("hidden");
+          } else {
+            errorText.classList.add("hidden");
+            // Submit the form or perform any other actions here
+          }
+        });
+
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const emailInput = document.getElementById("email");
+          const errorText = document.getElementById("error");
+          const emailRegex = /^\S+@\S+\.\S+$/;
+
+          if (!emailRegex.test(emailInput.value)) {
+            errorText.classList.remove("hidden");
+          } else {
+            errorText.classList.add("hidden");
+            // Submit the form or perform any other actions here
+          }
+        });
+    </script>
+  </body>
+</html>
