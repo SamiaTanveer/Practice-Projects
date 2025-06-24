@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+body {
+  background-color: hsl(0, 0%, 94%);
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calculator {
+  width: 40rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 40px;
+  border-radius: 20px 20px 10rem 20px;
+}
+.form {
+  display: flex;
+  gap: 20px;
+}
+label {
+  display: block;
+  color: hsl(0, 1%, 44%);
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 5px;
+  line-height: 2;
+}
+.input input {
+  width: 100%;
+  max-width: 9rem;
+  padding: 5px 12px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 5px;
+  border: 1px solid hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 8%);
+}
+.input input:focus {
+  outline: none;
+  border-color: hsl(259, 100%, 65%);
+  caret-color: hsl(259, 100%, 65%);
+}
+.margin {
+  position: relative;
+}
+.line {
+  border: 1px solid hsl(0, 0%, 86%);
+  margin: 45px 0;
+}
+.icon-arrow {
+  position: absolute;
+  right: 0;
+  top: -35px;
+  background-color: hsl(259, 100%, 65%);
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.icon-arrow:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+.age p {
+  color: hsl(0, 0%, 8%);
+  font-size: 4.5rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 4.5rem;
+  margin-bottom: 10px;
+}
+.dashes {
+  color: hsl(259, 100%, 65%);
+}
+.error-msg {
+  color: hsl(0, 100%, 67%);
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 12px;
+  display: none;
+}
+
+/* --------Responsiveness---------- */
+
+@media screen and (min-width: 1400px) {
+  .container {
+    min-height: 100vh;
+  }
+  .calculator {
+    width: 950px;
+    padding: 60px;
+  }
+  label {
+    font-size: 20px;
+  }
+  .input input {
+    max-width: 12rem;
+    padding: 10px 26px 10px 26px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    border-radius: 8px;
+  }
+  .line {
+    margin-top: 60px;
+  }
+  .icon-arrow {
+    right: 0;
+    top: -48px;
+    padding: 30px;
+  }
+  .age p {
+    margin: 10px;
+    font-size: 6.5rem;
+    font-weight: 900;
+    line-height: 7rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .calculator {
+    padding: 40px 10px 35px 12px;
+    width: 96%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  label {
+    font-size: 12px;
+  }
+  .form {
+    gap: 9px;
+  }
+  .input {
+    flex: 1;
+  }
+  .input input {
+    max-width: 5rem;
+    padding: 12px 6px 12px 12px;
+    font-size: 1rem;
+  }
+  .age p {
+    margin: 14px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 3rem;
+  }
+  .icon-arrow {
+    padding: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    padding: 10px;
+  }
+}
