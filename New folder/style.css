@@ -1,0 +1,127 @@
+body {
+  background: hsl(216, 12%, 8%);
+  font-family: "Outfit", sans-serif;
+}
+/* Center the card */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  background: hsl(213, 19%, 18%);
+  border-style: none;
+  color: hsl(0, 0%, 100%);
+}
+#star-icon {
+  margin: 0px 0px 25px 0px;
+}
+h2 {
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+p {
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: left;
+}
+.option input[type="radio"] {
+  display: none;
+}
+
+/* Display options in a row */
+.options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.option {
+  margin: 16px 10px; /*TB, RL*/
+}
+.option :hover {
+  background-color: hsl(25, 97%, 53%);
+}
+.option label {
+  background: hsl(213, 8%, 26%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.option span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.option input[type="radio"]:checked + label {
+  background-color: hsl(217, 12%, 63%);
+}
+#submitButton {
+  background-color: hsl(25, 97%, 53%);
+  align-content: center;
+  color: #fff;
+  width: 96%;
+  padding: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  border-radius: 25px;
+  border-style: none;
+}
+#submitButton:hover {
+  background-color: #fff;
+  color: hsl(25, 97%, 53%);
+}
+
+@media (max-width: 375px) {
+  .card {
+    padding: 12px;
+    width: calc(100% - 30px);
+  }
+}
+@media (min-width: 1440px) {
+  .card {
+    padding: 20px;
+  }
+  h2 {
+    margin-top: 55px;
+    font-size: 40px;
+  }
+  p {
+    font-size: 25px;
+    font-weight: bold;
+    padding-right: 10px;
+  }
+
+  .option label {
+    width: 70px;
+    height: 70px;
+    margin: 0px 8px;
+    border-radius: 50%;
+  }
+  .option span {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  #submitButton {
+    width: 94%;
+    padding: 20px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin-bottom: 20spx;
+    font-weight: bold;
+    border-radius: 30px;
+  }
+}

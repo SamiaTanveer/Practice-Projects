@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Rating Page</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <div class="card">
+        <div class="option" id="star-icon">
+          <input type="radio" name="option" value="star-icon" id="satr-icon" />
+          <label for="star-icon"
+            ><span> <img src="images/icon-star.svg" alt="star-icon" /></span
+          ></label>
+        </div>
+        <h2>How did we do?</h2>
+        <div>
+          <p>
+            Please let us know how we did with your support <br />
+            request. All feedback is appreciated to help us <br />
+            improve our offering!
+          </p>
+        </div>
+
+        <div class="options">
+          <div class="option">
+            <input type="radio" name="option" value="option1" id="option1" />
+            <label for="option1"><span>1</span></label>
+          </div>
+          <div class="option">
+            <input type="radio" name="option" value="option2" id="option2" />
+            <label for="option2"><span>2</span></label>
+          </div>
+          <div class="option">
+            <input type="radio" name="option" value="option3" id="option3" />
+            <label for="option3"><span>3</span></label>
+          </div>
+          <div class="option">
+            <input type="radio" name="option" value="option4" id="option4" />
+            <label for="option4"><span>4</span></label>
+          </div>
+          <div class="option">
+            <input type="radio" name="option" value="option5" id="option5" />
+            <label for="option5"><span>5</span></label>
+          </div>
+        </div>
+        <button id="submitButton">SUBMIT</button>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
