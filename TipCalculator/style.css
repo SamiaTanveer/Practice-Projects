@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: hsl(185, 41%, 84%);
+}
+.head-name {
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 7px;
+}
+.calculator {
+  background: hsl(0, 0%, 100%);
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  gap: 30px;
+  width: 800px;
+  margin: 50px 0;
+  overflow-y: hidden;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.inputs {
+  padding: 20px;
+  flex: 1;
+}
+.output {
+  background: hsl(183, 100%, 15%);
+  padding: 30px;
+  flex: 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+label,
+.tip {
+  color: hsl(186, 14%, 43%);
+  font-size: 12px;
+}
+.input {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: hsl(189, 41%, 97%);
+  border-radius: 5px;
+  margin-top: 5px;
+  border: 1px solid transparent;
+}
+input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: end;
+  font-size: 18px;
+  color: hsl(183, 100%, 15%);
+}
+input:focus {
+  outline: none;
+}
+.input:focus-within {
+  border-color: hsl(172, 67%, 45%);
+}
+.amounts {
+  margin: 30px 0;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 10px 0;
+  gap: 10px;
+}
+.percent {
+  padding: 5px;
+  background: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+.buttons button:hover {
+  background: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+}
+input[type="number"] {
+  appearance: textfield;
+}
+#active {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+#custom {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background: hsl(189, 41%, 97%);
+  color: hsl(186, 14%, 43%);
+  cursor: pointer;
+}
+.number-people {
+  display: flex;
+  justify-content: space-between;
+}
+.error {
+  color: rgb(255, 72, 72);
+  font-size: 12px;
+  display: none;
+}
+.tip-amount {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.tip-amount p {
+  color: hsl(0, 0%, 100%);
+  font-size: 13px;
+  margin: 15px 0;
+}
+.tip-amount p span {
+  color: hsl(184, 14%, 56%);
+}
+.final-amount {
+  color: hsl(172, 67%, 45%) !important;
+  font-size: 32px !important;
+}
+.reset-disable {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  background: hsl(186, 14%, 43%);
+  color: hsl(183, 100%, 15%);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.custom-input {
+  padding: 0;
+  margin-top: 0;
+}
+.custom-input input {
+  padding: 0;
+}
+
+/* media query for different screen sizes*/
+@media screen and (max-width: 1100px) {
+  .calculator {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .calculator {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 50px 10 10;
+  }
+  .calculator {
+    width: 100%;
+    display: block;
+    margin: 50px 0 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+  }
+  .buttons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .container {
+    padding: 70px 0 0;
+  }
+  .calculator {
+    margin: 70px 0 0;
+  }
+}
