@@ -1,4 +1,4 @@
--# 📢 Tip Calculator
+# 📢 Tip Calculator
 
 ## 📌 Project Overview
 
